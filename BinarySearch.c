@@ -18,7 +18,7 @@ int main() {
             break;
         } else if (numberToFind > intArray[midIndex]) {
             lowIndex = midIndex + 1;
-        } else if (numberToFind < intArray[midIndex]) {
+        } else {
             highIndex = midIndex - 1;
         }
     }
