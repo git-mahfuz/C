@@ -18,7 +18,7 @@ int main() {
             break;
         } else if (numberToFind > intArray[midIndex]) {
             lowIndex = midIndex + 1;
-        } else {
+        } else if (numberToFind < intArray[midIndex]) {
             highIndex = midIndex - 1;
         }
     }
@@ -26,7 +26,7 @@ int main() {
     if (lowIndex > highIndex) {
         printf("Number not found in array after %d loop!", looped);
     } else {
-        printf("%d found at index: %d after looping %d times", numberToFind, midIndex, looped);
+        printf("%d found at index: %d after looping %d times", intArray[midIndex], midIndex, looped);
     }
 
     return 0;
